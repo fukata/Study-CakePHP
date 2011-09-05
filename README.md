@@ -10,14 +10,14 @@ My study...
 
 ### Change security salt value
 	$ vim ./app/config/core.php
-	$ Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
+	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
 
 Example:
 	$ openssl sha1 hoge.txt
  
 ### Change security chipher seed
-vim app/config/core.php
-Configure::write('Security.cipherSeed', '76859309657453542496749683645');
+	$ vim app/config/core.php
+	Configure::write('Security.cipherSeed', '76859309657453542496749683645');
 
 Example:
 	$ for i in {1..10}; do echo -n $RANDOM; done;echo "";

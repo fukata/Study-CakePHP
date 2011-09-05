@@ -5,28 +5,28 @@ My study...
 
 ## Memo
 ## Setting for your database
-mv ./app/config/database.php.default ./app/config/database.php
-vim ./app/config/database.php
+	$ mv ./app/config/database.php.default ./app/config/database.php
+	$ vim ./app/config/database.php
 
 ### Change security salt value
-vim ./app/config/core.php
-Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
+	$ vim ./app/config/core.php
+	$ Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
 
 Example:
- openssl sha1 hoge.txt
+	$ openssl sha1 hoge.txt
  
 ### Change security chipher seed
 vim app/config/core.php
 Configure::write('Security.cipherSeed', '76859309657453542496749683645');
 
 Example:
- for i in {1..10}; do echo -n $RANDOM; done;echo "";
+	$ for i in {1..10}; do echo -n $RANDOM; done;echo "";
  
 ### Change template file expression.
-./cake/libs/view/view.php:157:	var $ext = '.ctp';
-./cake/libs/controller/controller.php:240:	var $ext = '.ctp';
-./cake/libs/controller/scaffold.php:106:	var $ext = '.ctp';
-./cake/tests/cases/libs/debugger.test.php:239:	 View::$ext = ".ctp"
+	./cake/libs/view/view.php:157:	var $ext = '.ctp';
+	./cake/libs/controller/controller.php:240:	var $ext = '.ctp';
+	./cake/libs/controller/scaffold.php:106:	var $ext = '.ctp';
+	./cake/tests/cases/libs/debugger.test.php:239:	 View::$ext = ".ctp"
 
 But keep default include cakephp .ctp files.
 
